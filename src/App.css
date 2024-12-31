@@ -1,0 +1,68 @@
+main{
+    width: 100%;
+    padding: .5rem 1rem;
+    background: rgb(245 245 250);
+}
+header{
+    height: min-content;
+    padding: .8rem 0;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+header .inputGroup{
+    width: 60%;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.inputGroup .input{
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+}
+
+header .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    color: rgb(133 133 133);
+}
+header .picName{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.picName p{
+    color: #000;
+    font-weight: 600;
+}
+
+.tableData{
+    background: #fff;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    color: #00006E;
+}
+
+.selectGroup{
+    display: flex;
+    gap: 10px;
+}
+
+.circle{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: lightgreen;
+}
+.circle-red{
+    background-color: indianred;
+}
