@@ -6,15 +6,15 @@ import Form from "./form";
 import Course from "./coursesList";
 
 export default function () {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<any[] | undefined>([]);
     const [cohort, setCohort] = useState("AllCohort");
     const [course, setCourse] = useState("AllCourse");
  
 
     async function loadData() {
         let data = await supabase.from('tableData').select('*');
-        data = data.data.map(item => ({...item,courses:item.courses.split(",")}));
-        setData(data);
+        let newData = data.data?.map(item => ({...item,courses:item.courses.split(",")}));
+        setData(newData);
     }
 
     function handleCohort(value) {
@@ -78,8 +78,7 @@ export default function () {
                 </TableHeader>
                 <TableBody>
                     {
-                        data
-                        .filter(item => item.cohort == cohort || cohort == "AllCohort")
+                        data?.filter(item => item.cohort == cohort || cohort == "AllCohort")
                         .filter(item => item.courses.includes(course) || course == "AllCourse")
                         .map((user) => {
                             return (
