@@ -1,11 +1,7 @@
-import Header from "./components/header";
-import Sidebar from "./components/app-sidebar";
 import './App.css';
-import { SidebarProvider } from './components/ui/sidebar.tsx'
-import Main from "./components/tableData.tsx";
 import Register from "./components/register.tsx";
-
 import { Router,Route,RootRoute, RouterProvider } from "@tanstack/react-router";
+import Sidebar from "./components/sidebar.tsx";
 
 const rootRoute = new RootRoute();
 
@@ -14,25 +10,18 @@ const registerRoute = new Route({
   path:"/",
   component:Register,
 })
-
-const mainRoute = new Route({
+const sidebarRoute  =new Route({
   getParentRoute: ()=> rootRoute,
-  path:"/main",
-  component:Main,
+  path:"main",
+  component:Sidebar,  
 })
 
 const router = new Router({
-  routeTree:rootRoute.addChildren([registerRoute,mainRoute]),
+  routeTree:rootRoute.addChildren([registerRoute,sidebarRoute]),
 });
 
 export default function () {
   return (
-    <SidebarProvider >
-      <Sidebar />
-      <main>
-        <Header />
-        <RouterProvider router={router} />
-      </main>
-    </SidebarProvider>
+    <RouterProvider router={router} />
   )
 }

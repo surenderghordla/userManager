@@ -49,8 +49,8 @@ export default function () {
             alert('Login Successfully...');
         }
 
-        const {data:{session}} = await supabase.auth.getSession();
-        console.log(session);
+        // const {data:{session}} = await supabase.auth.getSession();
+        // console.log(session);
     }
 
     return (
