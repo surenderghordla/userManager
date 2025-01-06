@@ -66,3 +66,26 @@ header .picName{
 .circle-red{
     background-color: indianred;
 }
+
+.registerPage{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0.50turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+.registerPage h1{
+    background-color: #fff;
+    font-weight: 500;
+    font-size: xx-large;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: .5rem 0;
+}
+
+.sidebar{
+    background: linear-gradient(0.50turn, #3f87a6, #ebf8e1, #f69d3c);
+}

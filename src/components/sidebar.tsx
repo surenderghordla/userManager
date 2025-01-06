@@ -6,7 +6,7 @@ import TableData from "./tableData.tsx";
 
 export default function () {
     return (
-        <SidebarProvider>
+        <SidebarProvider className="sidebar">
             <Sidebar />
             <main>
                 <Header />
