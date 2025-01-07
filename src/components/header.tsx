@@ -1,18 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { BellDot, CircleUserRound, CircleHelp, MessageSquareMore, Settings2 } from 'lucide-react';
-import supabase from "@/utils/supabase";
-import { useEffect } from "react";
 
 export default function () {
-
-    const user = async function () {
-        const username = await supabase.from('register').select("name");
-        console.log(username.data);
-    }
-
-    useEffect(()=>{
-        user
-    })
 
     return (
 

@@ -1,4 +1,4 @@
-import { TableOfContents, LayoutDashboard, BookMarked, CircleHelp, ChartPie, Settings } from "lucide-react"
+import { TableOfContents, LayoutDashboard, BookMarked, CircleHelp, ChartPie, Settings, LogOut } from "lucide-react"
 import Logo from '../assets/logo.svg';
 
 import {
@@ -43,6 +43,11 @@ const items = [
         url: "#",
         icon: Settings,
     },
+    {
+        title:"Logout",
+        url:"/",
+        icon:LogOut,
+    }
 ]
 
 export default function AppSidebar() {
